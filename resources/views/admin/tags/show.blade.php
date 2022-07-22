@@ -4,17 +4,17 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h1>{{$category->name}}</h1>
+            <h1>{{$tag->name}}</h1>
         </div>
         <div class="card-body">
             <div class="mb-3">
-                <a href="{{route('admin.categories.index')}}" class="btn btn-primary">Show all Categories</a>
+                <a href="{{route('admin.tags.index')}}" class="btn btn-primary">Show all Tags</a>
             </div>
-            @if (count($category->posts) > 0)
+            @if (count($tag->posts) > 0)
                 <div>
                     <h3>The associated Posts</h3>
                     <ul>
-                        @foreach ($category->posts as $post)
+                        @foreach ($tag->posts as $post)
                         <li>{{$post->title}}</li>                        
                         @endforeach
                     </ul>
