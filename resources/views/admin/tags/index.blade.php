@@ -28,7 +28,7 @@
                         <td>
                             <a href="{{route('admin.tags.show', $tag->id)}}" class="btn btn-primary">Show</a>
                             <a href="{{route('admin.tags.edit', $tag->id)}}" class="btn btn-warning">Edit</a>
-                            <form action="{{route('admin.categories.destroy', $tag->id)}}" method="POST" style="display: inline-block">
+                            <form action="{{route('admin.tags.destroy', $tag->id)}}" method="POST" style="display: inline-block">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
