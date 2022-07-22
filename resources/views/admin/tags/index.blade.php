@@ -4,11 +4,11 @@
 <div class="container">
     <div class="card">
         <div class="card-header">
-            <h1>Categories List</h1>
+            <h1>Tags List</h1>
         </div>
         <div class="card-body">
             <div class="mb-3">
-                <a href="{{route('admin.categories.create')}}" class="btn btn-success">Create a Category</a>
+                <a href="{{route('admin.tags.create')}}" class="btn btn-success">Create a Tag</a>
             </div>
             <table class="table table-striped">
                 <thead>
@@ -20,15 +20,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($categories as $category)
+                    @foreach ($tags as $tag)
                     <tr>
-                        <td>{{$category->id}}</td>
-                        <td>{{$category->name}}</td>
-                        <td>{{$category->slug}}</td>
+                        <td>{{$tag->id}}</td>
+                        <td>{{$tag->name}}</td>
+                        <td>{{$tag->slug}}</td>
                         <td>
-                            <a href="{{route('admin.categories.show', $category->id)}}" class="btn btn-primary">Show</a>
-                            <a href="{{route('admin.categories.edit', $category->id)}}" class="btn btn-warning">Edit</a>
-                            <form action="{{route('admin.categories.destroy', $category->id)}}" method="POST" style="display: inline-block">
+                            <a href="{{route('admin.tags.show', $tag->id)}}" class="btn btn-primary">Show</a>
+                            <a href="{{route('admin.tags.edit', $tag->id)}}" class="btn btn-warning">Edit</a>
+                            <form action="{{route('admin.categories.destroy', $tag->id)}}" method="POST" style="display: inline-block">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
